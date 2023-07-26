@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Creational.FactoryMethod;
+using DP.DesignPatterns.Creational.AbstractFactory;
 
 Client.Execute();
 
