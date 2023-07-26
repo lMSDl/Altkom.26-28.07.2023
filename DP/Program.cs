@@ -1,6 +1,9 @@
 ﻿
 
-using DP.SOLID.L;
+DP.DesignPatterns.Creational.Builder.Client.Execute();
+
+
+/*using DP.SOLID.L;
 
 var rectangle = new Square();
 uint a = 3;
@@ -21,4 +24,4 @@ static void SetupRectangle(Rectangle rectangle, uint a, uint b)
 {
     rectangle.A = a;
     rectangle.B = b;
-}
+}*/
