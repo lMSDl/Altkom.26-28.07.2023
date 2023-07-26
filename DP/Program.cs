@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Creational.AbstractFactory;
+using DP.DesignPatterns.Creational.Prototype;
 
 Client.Execute();
 
