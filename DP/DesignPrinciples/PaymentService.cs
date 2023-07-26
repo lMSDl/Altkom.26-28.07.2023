@@ -8,23 +8,16 @@ namespace DP.DesignPrinciples
 {
     public class PaymentService
     {
-        private ICollection<PaymentAccount> PaymentAccounts { get; } = new List<PaymentAccount> { new PaymentAccount(1), new PaymentAccount(2), new PaymentAccount(3), new PaymentAccount(4), new PaymentAccount(5) };
 
-        public bool Charge(int paymentAccountId, float amount)
+        public bool Charge(Customer customer, float amount)
         {
-            var account = FindById(paymentAccountId);
-            return account?.Charge(amount) ?? false;
+            return customer?.Account.Charge(amount) ?? false;
         }
 
-        private PaymentAccount FindById(int paymentAccountId)
-        {
-            return PaymentAccounts.SingleOrDefault(x => x.Id == paymentAccountId);
-        }
 
-        public void Fund(int paymentAccountId, float amount)
+        public void Fund(Customer customer, float amount)
         {
-            var account = FindById(paymentAccountId);
-            account?.Fund(amount);
+            customer?.Account.Fund(amount);
         }
     }
 }
