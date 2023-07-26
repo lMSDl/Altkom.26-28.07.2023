@@ -34,6 +34,8 @@ namespace DP.DesignPatterns.Creational.Builder
 
             Console.WriteLine(vehicle.ToString());
 
+            vehicle = new Vehicle() { Wheels= 4, Doors = 4, Seats = 5, TrunkCapacity = 500, EnginePower = 150 };
+            Console.WriteLine(vehicle.ToString());
         }
 
     }
