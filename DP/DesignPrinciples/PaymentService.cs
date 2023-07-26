@@ -22,13 +22,13 @@ namespace DP.DesignPrinciples
 
         public bool Charge(int paymentAccountId, float amount)
         {
-            var account = PaymentAccounts.SingleOrDefault(x => x.Id == paymentAccountId);
+            var account = FindById(paymentAccountId);
             if (account == null)
             {
                 return false;
             }
 
-            if (account.Income - account.Outcome + account.AllowedDebit < amount)
+            if (GetBalance(paymentAccountId) + account.AllowedDebit < amount)
             {
                 return false;
             }
@@ -37,9 +37,14 @@ namespace DP.DesignPrinciples
             return true;
         }
 
+        private PaymentAccount FindById(int paymentAccountId)
+        {
+            return PaymentAccounts.SingleOrDefault(x => x.Id == paymentAccountId);
+        }
+
         public void Fund(int paymentAccountId, float amount)
         {
-            var account = PaymentAccounts.Where(x => x.Id == paymentAccountId).SingleOrDefault();
+            var account = FindById(paymentAccountId);
             if (account == null)
             {
                 return;
@@ -50,8 +55,8 @@ namespace DP.DesignPrinciples
 
         public float? GetBalance(int paymentAccountId)
         {
-            var customer = PaymentAccounts.Where(x => x.Id == paymentAccountId).SingleOrDefault();
-            return customer?.Income - customer?.Outcome;
+            var account = FindById(paymentAccountId);
+            return account?.Income - account?.Outcome;
         }
     }
 }
