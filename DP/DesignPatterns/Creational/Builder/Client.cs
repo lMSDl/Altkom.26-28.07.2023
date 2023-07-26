@@ -23,6 +23,17 @@ namespace DP.DesignPatterns.Creational.Builder
             vehicle = builder.Build();
             Console.WriteLine(vehicle.ToString());
 
+            vehicle = new VehicleBuilder()
+                                .SetWeels(4)
+                                .SetSeets(5)
+                                .SetDoors(4)
+                                .SetEngine(150)
+                                .SetTrunk(500)
+                                .Build();
+
+
+            Console.WriteLine(vehicle.ToString());
+
         }
 
     }
