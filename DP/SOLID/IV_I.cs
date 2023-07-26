@@ -37,7 +37,7 @@ namespace DP.SOLID.I
         }
     }
 
-    class Poem : IPdfFormatter, IConvertible
+    class Poem : IPdfFormatter
     {
         public void ToPdf()
         {
