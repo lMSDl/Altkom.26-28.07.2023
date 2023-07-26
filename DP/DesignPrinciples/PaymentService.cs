@@ -13,18 +13,7 @@ namespace DP.DesignPrinciples
         public bool Charge(int paymentAccountId, float amount)
         {
             var account = FindById(paymentAccountId);
-            if (account == null)
-            {
-                return false;
-            }
-
-            if (GetBalance(paymentAccountId) + account.AllowedDebit < amount)
-            {
-                return false;
-            }
-
-            account.Outcome += amount;
-            return true;
+            return account?.Charge(amount) ?? false;
         }
 
         private PaymentAccount FindById(int paymentAccountId)
@@ -35,18 +24,7 @@ namespace DP.DesignPrinciples
         public void Fund(int paymentAccountId, float amount)
         {
             var account = FindById(paymentAccountId);
-            if (account == null)
-            {
-                return;
-            }
-
-            account.Income += amount;
-        }
-
-        public float? GetBalance(int paymentAccountId)
-        {
-            var account = FindById(paymentAccountId);
-            return account?.Income - account?.Outcome;
+            account?.Fund(amount);
         }
     }
 }
