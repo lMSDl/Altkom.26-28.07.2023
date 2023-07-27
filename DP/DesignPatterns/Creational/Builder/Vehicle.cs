@@ -40,6 +40,10 @@ namespace DP.DesignPatterns.Creational.Builder
         public int? TrunkCapacity { get; set; }
         public int? EnginePower { get; set; }
 
+
+        public string Manufacturer { get; set; }
+        public DateTime ProductionDateTime { get; set; }
+
         public override string ToString()
         {
             return $"Vehicle has {Wheels} wheels, {Seats} seats, {Doors} doors" + (TrunkCapacity.HasValue ? $", trunk capacity {TrunkCapacity}l" : "") + " and " + (EnginePower.HasValue ? $"engine with {EnginePower}HP" : "no engine");

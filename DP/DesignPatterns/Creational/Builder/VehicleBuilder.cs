@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace DP.DesignPatterns.Creational.Builder
 {
-    internal class VehicleBuilder
+    internal class VehicleBuilder : VehicleBuilderFacade
     {
-        private Vehicle Vehicle { get; }
         public VehicleBuilder()
         {
-            Vehicle = new Vehicle();
+        }
+
+        internal VehicleBuilder(Vehicle vehicle) : base(vehicle)
+        {
         }
 
         public VehicleBuilder SetWeels(int wheels)
@@ -45,9 +47,5 @@ namespace DP.DesignPatterns.Creational.Builder
         }
 
 
-        public Vehicle Build()
-        {
-            return (Vehicle)Vehicle.Clone();
-        }
     }
 }

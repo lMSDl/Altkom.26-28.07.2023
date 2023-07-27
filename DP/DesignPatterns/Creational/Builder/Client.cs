@@ -30,12 +30,18 @@ namespace DP.DesignPatterns.Creational.Builder
 
 
 
-            vehicle = new VehicleBuilder()
-                                .SetWeels(4)
-                                .SetSeets(5)
-                                .SetDoors(4)
-                                .SetEngine(150)
-                                .SetTrunk(500)
+            vehicle = new VehicleBuilderFacade()
+                                .Parts
+                                    .SetWeels(4)
+                                    .SetSeets(5)
+                                .Info
+                                    .SetManufacturer("Altkom")
+                                .Parts
+                                    .SetDoors(4)
+                                    .SetEngine(150)
+                                    .SetTrunk(500)
+                                .Info
+                                    .SetProductionDateTime(DateTime.Now)
                                 .Build();
 
 
