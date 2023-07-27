@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace DP.DesignPatterns.Structural.Bridge.I
 {
-    internal abstract class Color
+    internal abstract class Brightness
     {
-        public Brightness Brightness { get; set; }
-
-
         public override string ToString()
         {
-            return (Brightness?.ToString() ?? "") + GetType().Name;
+            return GetType().Name;
         }
     }
 }

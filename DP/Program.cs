@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Structural.Bridge.II;
+using DP.DesignPatterns.Structural.Bridge.I;
 
 Client.Execute();
 

@@ -20,6 +20,11 @@ namespace DP.DesignPatterns.Structural.Bridge.I
             shape.Color = color;
             Console.WriteLine(shape);
 
+            Brightness brightness = new Dark();
+            color.Brightness = brightness;
+
+            Console.WriteLine(shape);
+
         }
     }
 }
