@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Creational.Builder;
+using DP.DesignPatterns.Structural.Flyweight;
 
 Client.Execute();
 
