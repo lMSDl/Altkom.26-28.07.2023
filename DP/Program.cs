@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Structural.Proxy;
+using DP.DesignPatterns.Behavioral.ChainOfResponsibility.II;
 
 Client.Execute();
 
