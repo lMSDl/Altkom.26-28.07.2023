@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Creational.Singleton;
+using DP.DesignPatterns.Creational.ObjectPool;
 
 Client.Execute();
 
