@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Structural.Flyweight;
+using DP.DesignPatterns.Structural.Proxy;
 
 Client.Execute();
 
