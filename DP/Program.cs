@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Structural.Composite;
+using DP.DesignPatterns.Structural.Decorator;
 
 Client.Execute();
 
