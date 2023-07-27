@@ -15,11 +15,16 @@ namespace DP.DesignPatterns.Creational.Prototype
 
         public Address Address { get; set; }
 
+        public ICollection<Person> Children { get; set; }
+
         public object Clone()
         {
             var clone = (Person)MemberwiseClone();
 
             clone.Address = (Address)Address.Clone();
+
+            if(Children is not null)
+                clone.Children = new List<Person>(Children);
             
             return clone;
         }

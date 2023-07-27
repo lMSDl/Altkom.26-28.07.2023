@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DP.DesignPatterns.Creational.Builder
 {
-    internal class Vehicle
+    internal class Vehicle : ICloneable
     {
 
         public Vehicle(int wheels, int seats)
@@ -43,6 +43,11 @@ namespace DP.DesignPatterns.Creational.Builder
         public override string ToString()
         {
             return $"Vehicle has {Wheels} wheels, {Seats} seats, {Doors} doors" + (TrunkCapacity.HasValue ? $", trunk capacity {TrunkCapacity}l" : "") + " and " + (EnginePower.HasValue ? $"engine with {EnginePower}HP" : "no engine");
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
         }
     }
 }
