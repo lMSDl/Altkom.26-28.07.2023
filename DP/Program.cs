@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Creational.ObjectPool;
+using DP.DesignPatterns.Structural.Adapter.I;
 
 Client.Execute();
 
