@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Structural.Decorator;
+using DP.DesignPatterns.Structural.Facade.I;
 
 Client.Execute();
 
