@@ -10,6 +10,6 @@ namespace DP.DesignPatterns.Behavioral.Visitor.I
     {
         void Visit(PlainText plainText);
         void Visit(BoldText boldText);
-        //void Visit(Hyperlink hyperlink);
+        void Visit(Hyperlink hyperlink);
     }
 }
