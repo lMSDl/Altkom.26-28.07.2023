@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Behavioral.Strategy;
+using DP.DesignPatterns.Behavioral.TemplateMethod;
 
 Client.Execute();
 
