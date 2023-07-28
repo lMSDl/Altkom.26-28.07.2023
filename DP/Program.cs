@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Behavioral.Mediator;
+using DP.DesignPatterns.Behavioral.Memento;
 
 Client.Execute();
 
