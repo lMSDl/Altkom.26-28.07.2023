@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Behavioral.Observer;
+using DP.DesignPatterns.Behavioral.State;
 
 Client.Execute();
 
