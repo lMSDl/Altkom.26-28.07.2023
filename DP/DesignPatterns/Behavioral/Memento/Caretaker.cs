@@ -45,7 +45,7 @@ namespace DP.DesignPatterns.Behavioral.Memento
 
         private void RestoreState(Memento<T> memento)
         {
-            (memento.GetState() as Person).FirstName = "ala ma kota";
+            //(memento.GetState() as Person).FirstName = "ala ma kota";
 
 
             _originator.Restore(memento.GetState());
