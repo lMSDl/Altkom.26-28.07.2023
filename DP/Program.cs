@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Behavioral.Command;
+using DP.DesignPatterns.Behavioral.Iterator;
 
 Client.Execute();
 
