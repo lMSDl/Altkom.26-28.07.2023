@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Behavioral.ChainOfResponsibility.II;
+using DP.DesignPatterns.Behavioral.Command;
 
 Client.Execute();
 
