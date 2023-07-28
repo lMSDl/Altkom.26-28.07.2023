@@ -1,6 +1,6 @@
 ﻿
 
-using DP.DesignPatterns.Behavioral.Visitor.II;
+using DP.DesignPatterns.Behavioral.NullObject;
 
 Client.Execute();
 
