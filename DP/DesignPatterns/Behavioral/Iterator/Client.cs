@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reactive.Linq;
+using System.Threading.Channels;
 
 namespace DP.DesignPatterns.Behavioral.Iterator
 {
@@ -38,6 +40,15 @@ namespace DP.DesignPatterns.Behavioral.Iterator
             {
                 Console.WriteLine(element.Item1 + element.Item2);
             }
+
+
+            list.ToObservable()
+                .Buffer(2, 1)
+                .ToEnumerable()
+                .Where(x => x.Count == 2)
+                .ToList()
+                .ForEach(x => Console.WriteLine(x[0] + x[1]));
+
         }
     }
 }
