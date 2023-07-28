@@ -12,9 +12,13 @@ namespace DP.DesignPatterns.Behavioral.ChainOfResponsibility.II
         public string Name { get; set; }
         public Component Parent { get; set; }
 
-        public virtual void Click()
+        public void Click()
         {
-            Parent?.Click();
+            Click(false);
+        }
+        protected virtual void Click(bool handled)
+        {
+            Parent?.Click(handled);
         }
     }
 }

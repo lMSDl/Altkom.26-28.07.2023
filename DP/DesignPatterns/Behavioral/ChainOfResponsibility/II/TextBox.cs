@@ -20,9 +20,15 @@ namespace DP.DesignPatterns.Behavioral.ChainOfResponsibility.II
         }
 
 
-        public override void Click()
+        protected override void Click(bool handled)
         {
-            Console.WriteLine($"{Name} złapał focus");
+            if (handled)
+                base.Click(handled);
+            else
+            {
+                Console.WriteLine($"{Name} złapał focus");
+                base.Click(true);
+            }
         }
     }
 }

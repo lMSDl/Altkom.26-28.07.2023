@@ -11,15 +11,15 @@ namespace DP.DesignPatterns.Behavioral.ChainOfResponsibility.II
         public Func<bool> OnClick { get; set; }
 
 
-        public override void Click()
+        protected override void Click(bool handled)
         {
-            if(OnClick())
+            if(!handled && OnClick())
             {
-                return;
+                base.Click(true);
             }
             else
             {
-                base.Click();
+                base.Click(handled);
             }
         }
     }
